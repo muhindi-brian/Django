@@ -4,8 +4,10 @@ from django.views.generic import (
     ListView,
     DetailView,
     CreateView,
+    FormView,
 )
 from .models import QuestionnaireResponse
+from .forms import QuestionnaireForm
 
 def home(request):
     return render(request, "questionnaire/home.html")
@@ -20,8 +22,10 @@ class QuestionnaireListView(ListView):
     template_name = "questionnaire/list_view.html"
     ordering = ["-date_published"]
 
+
 class QuestionnaireCreateView(CreateView):
-    model = QuestionnaireResponse
-    fields = ["gender","age","nationality","question_1"]
+    form_class = QuestionnaireForm
+    template_name = "questionnaire/questionnaireresponse_form.html"
     success_url = "/listview/"
-# Create your views here.s
+
+

@@ -2,7 +2,7 @@ from django.urls import path
 from questionnaire import views
 from .views import (
     QuestionnaireListView,
-    QuestionnaireCreateView,
+    QuestionnaireCreateView
 )
 
 urlpatterns = [
@@ -10,4 +10,6 @@ urlpatterns = [
     path("about/",views.about,name="about"),
     path("listview/",QuestionnaireListView.as_view(),name="questionnaire-list"),
     path("createview/",QuestionnaireCreateView.as_view(),name="questionnaire-create"),
+
 ]
+    
