@@ -26,11 +26,11 @@
                     <a class="nav-link" href="{% url 'questionnaire-list' %}">List</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'questionnaire-create' %}">create</a>
+                    <a class="nav-link" href="{% url 'questionnaire-create' %}">Create</a>
                 </li>
                 {% if request.user.is_staff %}
                 <li class="nav-item">
-                    <a class="nav-link" href="/admin/">admin</a>
+                    <a class="nav-link" href="/admin/">Admin</a>
                 </li>
                 {% endif %}
         </div>
