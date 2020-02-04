@@ -66,6 +66,36 @@
                 $('#div_id_question_2').hide()
                 $('#div_id_question_3').hide()
             }
+        
+        $("#id_question_3_1").change(function(){
+            if($(this).is(":checked")){
+                $('#div_id_question_3_subquestion_1').show()
+            } else if($(this).is(":not(:checked)")){
+                $('#div_id_question_3_subquestion_1').hide()
+            }
+        })
+        $("#id_question_3_2").change(function(){
+            if($(this).is(":checked")){
+                $('#div_id_question_3_subquestion_2').show()
+            } else if($(this).is(":not(:checked)")){
+                $('#div_id_question_3_subquestion_2').hide()
+            }
+        })
+        $("#id_question_3_3").change(function(){
+            if($(this).is(":checked")){
+                $('#div_id_question_3_subquestion_3').show()
+            } else if($(this).is(":not(:checked)")){
+                $('#div_id_question_3_subquestion_3').hide()
+            }
+        })
+        $("#id_question_3_4").change(function(){
+            if($(this).is(":checked")){
+                $('#div_id_question_3_subquestion_4').show()
+            } else if($(this).is(":not(:checked)")){
+                $('#div_id_question_3_subquestion_4').hide()
+            }
+        })
+           
 
         });
 

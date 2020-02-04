@@ -7,6 +7,7 @@ gender_choices = [
 ]
 
 question_choices = [
+    (None, ""),
     ('Yes', "Yes"),
     ('No', "No")
 ]
@@ -46,13 +47,13 @@ class QuestionnaireResponse(models.Model):
     age = models.IntegerField()
     nationality = models.CharField(max_length=50)
 
-    question_1 = models.CharField("Has your trip exceeded your expectations?",max_length=5,choices=question_choices)
+    question_1 = models.CharField("Has your trip exceeded your expectations?",max_length=5,choices=question_choices,blank=False,default="")
     question_2 = models.TextField("What was the most memorable moment with us?", max_length=200,blank=True)
-    question_3 = models.CharField("Where can we improve?",max_length=20, choices=improve_choices, blank=True)
+    question_3 = models.CharField("Where can we improve?",max_length=20, choices=improve_choices, blank=True,default="")
 
     
-    question_3_subquestion_1 = models.CharField("Welcome improvements",max_length=50,choices=welcome_choices, blank=True)
-    question_3_subquestion_2 = models.CharField("Room improvements",max_length=50,choices=room_choices, blank=True)
+    question_3_subquestion_1 = models.CharField("Welcome improvements",max_length=50,choices=welcome_choices, blank=True, default="")
+    question_3_subquestion_2 = models.CharField("Room improvements",max_length=50,choices=room_choices, blank=True, )
     question_3_subquestion_3 = models.CharField("Food improvements",max_length=50,choices=food_choices, blank=True)
     question_3_subquestion_4 = models.CharField("Guiding improvements",max_length=50,choices=guiding_choices, blank=True)
     
